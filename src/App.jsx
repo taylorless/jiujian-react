@@ -1,16 +1,24 @@
 import React from "react";
 import HelloWorld from "./components/HelloWorld";
 
-//类组件
+//类组件--有状态组件
 class App extends React.Component {
+  //挂载阶段
   constructor() {
+    console.log("constructor");
     super();
     this.state = {
       message: "Hello React!",
       count: 0,
     };
   }
-  //没有太理解，这里定义箭头函数的意义
+  componentWillMount() {
+    console.log("componentWillMount");
+  }
+  //在项目中用的很多
+  componentDidMount() {
+    console.log("componentDidMount");
+  }
   //public class fields语法 绑定事件，和静态属性是不一样的
   changeCount = () => {
     this.setState({
@@ -18,6 +26,7 @@ class App extends React.Component {
     });
   };
   render() {
+    console.log("render");
     const { message, count } = this.state;
     return (
       <div>
