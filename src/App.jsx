@@ -1,5 +1,6 @@
 import React from "react";
 import HelloWorld from "./components/HelloWorld";
+import ProductList from "./components/productList";
 
 //类组件--有状态组件
 class App extends React.Component {
@@ -33,8 +34,8 @@ class App extends React.Component {
         <h2>类组件，有状态组件</h2>
         <h2>{message}</h2>
         <button onClick={this.changeCount}>changeCount</button>
-        <h1>{count}</h1>
-        <HelloWorld msg="我是传入的数据" />
+        <HelloWorld msg="我是传入的数据" count={count} />
+        <ProductList />
       </div>
     );
   }
