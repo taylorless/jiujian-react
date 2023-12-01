@@ -1,6 +1,7 @@
 import React from "react";
 
-//函数式组件--无状态组件
+//函数式组件--无状态组件--现在有了useState之后，函数式组件也可以控制状态了
+//没有生命周期
 function HelloWorld(props) {
   return (
     <div>

@@ -2,7 +2,8 @@ import React from "react";
 import HelloWorld from "./components/HelloWorld";
 import ProductList from "./components/productList";
 
-//类组件--有状态组件
+//类组件--有状态组件--setState来控制状态 注意this的指向和使用
+// 有生命周期
 class App extends React.Component {
   //挂载阶段
   constructor() {
